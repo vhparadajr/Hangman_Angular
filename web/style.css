@@ -1,0 +1,90 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+.container{
+  display: inline-flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.container-inner{
+  border: 2px solid;
+  width: 45%;
+  display: inline-block;
+  height: 255px;
+}
+
+button{
+  width: 50px;
+  height: 54px;
+  font-size: 1.5em;
+  margin: 2px;
+}
+
+h1{
+  margin-top: 20px;
+  font-size: 3em;
+  margin-bottom: -8px;
+}
+
+.buttonLetters{
+  text-align: center;
+}
+
+.displayWord{
+  font-size: 4em;
+  margin-top: 30px;
+  display: block;
+}
+
+.center{
+  text-align: center;
+}
+
+.hangmanImages{
+  text-align: center;
+  margin-left: -80px;
+}
+
+.guessesLeft{
+  margin-top: 28px;
+  display: block;
+  font-size: 1.5em;
+  color: blue;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.incorrect{
+  color: red;
+  font-size: 2.5em;
+}
+
+.correct{
+  color: green;
+  font-size: 2.5em;
+}
+.border{
+  width: 265px;
+  text-align: center;
+  padding: 13px;
+  height: 125px;
+}
+.borderRed{
+  border: 4px solid red;
+}
+.borderGreen{
+  border: 4px solid green;
+}
+
+.spaces{
+  padding-right: 5px;
+}

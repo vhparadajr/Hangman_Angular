@@ -1,0 +1,28 @@
+{
+  "name": "hangman-vic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vhparadajr/hangman_Angular.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vhparadajr/hangman_Angular/issues"
+  },
+  "homepage": "https://github.com/vhparadajr/hangman_Angular#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4",
+    "uuid": "^3.3.2"
+  }
+}

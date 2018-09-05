@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman App</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src = "app.js"></script>
+    <script src = "gallows.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+  </head>
+  <body ng-app= "HangmanApp" ng-controller = "GameController">
+    <div>
+      <div class="container">
+        <div class="incorrect flex">
+          <div class="borderRed border">
+            <i class="fas fa-thumbs-down"></i>
+            <div>
+              <span ng-repeat="letter in incorrectLettersChosen" class="spaces">{{letter}}</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="center">
+          <h1>Ready to play Hangman?</h1>
+          <span class="displayWord">{{displayWord}}</span>
+          <span class="guessesLeft">Guesses left: {{guesses}}</span>
+        </div>
+        <div class="correct flex">
+          <div class="borderGreen border">
+            <i class="fas fa-thumbs-up"></i>
+            <div>
+              <span ng-repeat="letter in correctLettersChosen" class="spaces">{{letter}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="container-inner flex">
+          <div class="buttonLetters">
+            <button type="button" name="button" ng-repeat="letter in alphabet track by $index" ng-click="sendGuess(letter)">{{letter}}</button>
+          </div>
+        </div>
+        <div class="container-inner">
+          <div class="hangmanImages">
+            <hg-hangman-image incorrect-count="{{incorrectLettersChosen.length}}"></hg-hangman-image>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
