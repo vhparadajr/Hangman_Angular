@@ -26,7 +26,7 @@ A web app for playing Hangman
 
 
 ## Lessons Learned:
-- How to the Angular frameworks
+- How to use the Angular framework
 - Routes and endpoints manipulation
 - How to optomize server logic
 
