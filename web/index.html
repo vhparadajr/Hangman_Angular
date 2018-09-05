@@ -8,7 +8,7 @@
     <script src = "gallows.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   </head>
   <body ng-app= "HangmanApp" ng-controller = "GameController">
@@ -39,7 +39,7 @@
       </div>
       <div class="container">
         <div class="container-inner flex">
-          <div class="buttonLetters">
+          <div class="center">
             <button type="button" name="button" ng-repeat="letter in alphabet track by $index" ng-click="sendGuess(letter)">{{letter}}</button>
           </div>
         </div>
