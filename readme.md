@@ -29,6 +29,7 @@ A web app for playing Hangman
 - How to use the Angular framework
 - Routes and endpoints manipulation
 - How to optomize server logic
+- How to design a scalable app
 
 
 ## Examples:
