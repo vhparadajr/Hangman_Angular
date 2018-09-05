@@ -23,6 +23,7 @@ A web app for playing Hangman
 - Add games won/lost count
 - Keyboard UI 
 - Server logic
+- Mobile responsive
 
 
 ## Lessons Learned:
