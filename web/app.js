@@ -23,8 +23,8 @@ app.controller("GameController", ['$scope','$timeout', '$http', function($scope,
 
 
   function startNewGame(){
-    $http.get('/hangman/word') // making a request
-    .then(function(response) { // then sending response
+    $http.get('/hangman/word')
+    .then(function(response) {
       console.log(response.data)
       let word = response.data.displayWord;
       let id = response.data.id;
@@ -32,7 +32,7 @@ app.controller("GameController", ['$scope','$timeout', '$http', function($scope,
     })
   }
 
-
+  // function that sends letter guessed by user to server
   $scope.sendGuess =function(letter){
     console.log(letter)
     let url = '/hangman/letter';
@@ -55,7 +55,7 @@ app.controller("GameController", ['$scope','$timeout', '$http', function($scope,
   }
 
 
-
+//function
   function verifyLetter(isInWord, letter){
     letter = letter.toLowerCase()
     if($scope.correctLettersChosen.indexOf(letter) !== -1 || $scope.incorrectLettersChosen.indexOf(letter) !== -1){
@@ -72,8 +72,8 @@ app.controller("GameController", ['$scope','$timeout', '$http', function($scope,
       $scope.incorrectLettersChosen.push(letter);
     }
     $scope.input.letter = "";
-    if($scope.guesses == 0){
-      // restart game if lost
+    // restart game if lost
+    if($scope.guesses == 0)
       $timeout(function () {
          startNewGame();
       }, 500);

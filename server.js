@@ -4,12 +4,10 @@ const app = express()
 const uuidv4 = require('uuid/v4');
 
 let port = 7000
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-
 app.use(express.static("web"))
-
-
 app.listen(port)
 console.log(`app listening on ${port}`)
 
@@ -24,6 +22,7 @@ function selectRandomWord(){
   return words[index];
 }
 
+
 function checkIfLetterExists(letter, word) {
   // returns true or false
   if(word.indexOf(letter.toLowerCase()) > -1){
@@ -35,6 +34,7 @@ function checkIfLetterExists(letter, word) {
   }
 }
 
+// sets hidden word length
 function setSpaces(word){
   let tempDisplayWord  = '';
   for (i = 0; i < word.length; i++){
@@ -43,6 +43,7 @@ function setSpaces(word){
   return tempDisplayWord
 }
 
+ // updates hidden word display with updated letter
 function updateSpaces(letter, word, displayWord){
   for (i = 0; i < word.length; i++) {
     if(word[i].toLowerCase() == letter.toLowerCase()){
